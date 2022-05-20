@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
     $("#guardar").click(function () {
-        console.log('Hola');
+        $("#guardar").css("background-color", "#ff0000");
     });
 });
