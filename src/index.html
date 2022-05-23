@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <div class="ui two column centered grid">
+        <div class="ui two column centered grid" id="gridDatos">
             <div class="column">
                 <div class="ui grid">
                     <div class="five wide column">
@@ -37,6 +37,7 @@
                                 <input type="text" placeholder="Enter Color" id="colorHex">
 
                             </div>
+                            <br><br>
                             <div class="ui animated button" tabindex="0" id="guardarHx">
                                 <div class="visible content">Agregar</div>
                                 <div class="hidden content">
@@ -142,10 +143,10 @@
         </div>
 
 
-        <div class="ui two column centered grid">
+        <div class="ui two column centered grid" id="gridPrev">
             <div class="column" id="fgp">
-                <div class="content">
-                    Previsualizacion
+                <div class="content" style="color:white; display: block; text-align: center">
+                    Previsualización
                 </div>
                 <div>
                     <div class="ui menu" id="fondo_menu">
@@ -157,14 +158,16 @@
                         <a class="item">Experiencia</a>
                         <a class="item">Contactenos</a>
                     </div>
-                    <div class="item" id="cuerpo">
+                    <div class="item" id="cuerpo" style="display: block; text-align: center">
                         <img src="../src/img/dashboard.png" width="800px" height="500px">
                     </div>
                 </div>
                 <div id="footer_pg" height="100px">
                     <div class="content">
                         <div class="">
-                            <label for="txt_nombre" id="txt_final">PC Reparacion de Computadoras.Desarrollado por:Reyner
+                            <label for="txt_nombre" id="txt_final" style="display: block; text-align: center">PC
+                                Reparacion de
+                                Computadoras.Desarrollado por:Reyner
                                 Badilla Arias y Michael Solis Alvarado. @2022</label>
                         </div>
                     </div>

@@ -1,0 +1,29 @@
+
+#gridDatos
+{
+  background-image: -webkit-linear-gradient(135deg, rgba(111, 134, 214, 0.9) 0%, rgba(75, 198, 239, 0.9) 100%), url('../img/fondo.jpg');
+  background-image: -o-linear-gradient(135deg, rgba(111, 134, 214, 0.9) 0%, rgba(75, 198, 239, 0.9) 100%), url('../img/fondo.jpg');
+  background-image: linear-gradient(-45deg, rgba(111, 134, 214, 0.9) 0%, rgba(75, 198, 239, 0.9) 100%), url('../img/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-top: 50px !important;
+  padding-bottom: 10px !important;
+  min-height: 276px;
+  border-radius: 15px;
+  background-size:cover;
+}
+
+#gridPrev{
+    background-image: url('../img/background.jpg');
+}
+
+#fgp{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.5em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#txt_final{
+    color:white;
+}
