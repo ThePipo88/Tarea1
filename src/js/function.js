@@ -8,33 +8,33 @@ $(document).ready(function () {
     });
 });
 
-var btn1 = "ng", btn2 = "ng", btn3 = "ng", btn4 = "ng";
-var clr1 = "ng", clr2 = "ng", clr3 = "ng", clr = "ng";
+const btn = ['ns', 'ns', 'ns', 'ns'];
+const clr = ['ns', 'ns', 'ns', 'ns'];
 
 function agregarColor() {
 
     var color = document.getElementById('colorpicker').value;
 
-    if (btn1 == "ng") {
+    if (btn[0] == 'ns') {
         probar1.style.backgroundColor = color;
         eliminar1.style.backgroundColor = color;
-        btn1 = 'n';
-        clr1 = color;
-    } else if (btn2 == 'ng') {
+        btn[0] = 'n';
+        clr[0] = color;
+    } else if (btn[1] == 'ns') {
         probar2.style.backgroundColor = color;
         eliminar2.style.backgroundColor = color;
-        btn2 = 'n';
-        clr2 = color;
-    } else if (btn3 == 'ng') {
+        btn[1] = 'n';
+        clr[1] = color;
+    } else if (btn[2] == 'ns') {
         probar3.style.backgroundColor = color;
         eliminar3.style.backgroundColor = color;
-        btn3 = 'n';
-        clr3 = color;
-    } else if (btn4 == 'ng') {
+        btn[2] = 'n';
+        clr[2] = color;
+    } else if (btn[3] == 'ns') {
         probar4.style.backgroundColor = color;
         eliminar4.style.backgroundColor = color;
-        btn4 = 'n';
-        clr4 = color;
+        btn[3] = 'n';
+        clr[3] = color;
     }
 }
 
@@ -42,48 +42,52 @@ function agregarManual() {
 
     var color = document.getElementById('colorHex').value;
 
-    if (btn1 == "ng") {
+    if (btn[0] == 'ns') {
         probar1.style.backgroundColor = color;
         eliminar1.style.backgroundColor = color;
-        btn1 = 'n';
-        clr1 = color;
-    } else if (btn2 == 'ng') {
+        btn[0] = 'n';
+        clr[0] = color;
+    } else if (btn[1] == 'ns') {
         probar2.style.backgroundColor = color;
         eliminar2.style.backgroundColor = color;
-        btn2 = 'n';
-        clr2 = color;
-    } else if (btn3 == 'ng') {
+        btn[1] = 'n';
+        clr[1] = color;
+    } else if (btn[2] == 'ns') {
         probar3.style.backgroundColor = color;
         eliminar3.style.backgroundColor = color;
-        btn3 = 'n';
-        clr3 = color;
-    } else if (btn4 == 'ng') {
+        btn[2] = 'n';
+        clr[2] = color;
+    } else if (btn[3] == 'ns') {
         probar4.style.backgroundColor = color;
         eliminar4.style.backgroundColor = color;
-        btn4 = 'n';
-        clr4 = color;
+        btn[3] = 'n';
+        clr[3] = color;
     }
 }
 
-function eliminarEfecto(btn) {
-    var boton = btn.id;
+function eliminarEfecto(btnp) {
+    var boton = btnp.id;
 
-    if (btn1 == 'n' && boton == 'eliminar1') {
+    var value = btn[3];
+
+    console.log(value);
+
+    if (btn[0] == 'n' && boton == 'eliminar1') {
         probar1.style.backgroundColor = '';
         eliminar1.style.backgroundColor = '';
-        btn1 = 'ng';
-    } else if (btn2 == 'n' && boton == 'eliminar2') {
+        btn[0] = 'ns';
+    } else if (btn[1] == 'n' && boton == 'eliminar2') {
         probar2.style.backgroundColor = '';
         eliminar2.style.backgroundColor = '';
-        btn2 = 'ng';
-    } else if (btn3 == 'n' && boton == 'eliminar3') {
+        btn[1] = 'ns';
+    } else if (btn[2] == 'n' && boton == 'eliminar3') {
         probar3.style.backgroundColor = '';
         eliminar3.style.backgroundColor = '';
-        btn3 = 'ng';
-    } else if (btn4 == 'n' && boton == 'eliminar4') {
+        btn[2] = 'ns';
+    } else if (btn[3] == 'n' && boton == 'eliminar4') {
         probar4.style.backgroundColor = '';
         eliminar4.style.backgroundColor = '';
-        btn4 = 'ng'
+        btn[3] = 'ns'
     }
 }
 
@@ -94,13 +98,13 @@ function agregarEstilo(btn) {
     var nc = "";
 
     if (boton == 'probar1') {
-        nc = clr1;
+        nc = clr[0];
     } else if (boton == 'probar2') {
-        nc = clr2;
+        nc = clr[1];
     } else if (boton == 'probar3') {
-        nc = clr3;
+        nc = clr[2];
     } else if (boton == 'probar4') {
-        nc = clr4;
+        nc = clr[3];
     }
 
     if (document.getElementById('fondoMenu').checked) {
@@ -118,12 +122,8 @@ function agregarEstilo(btn) {
     }
     else if (document.getElementById('MenuHover').checked) {
 
-
-
         const inputs = document.getElementsByTagName('a');
-
         const antColor = inputs[0].style.color;
-
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('mouseover', function () {
                 inputs[i].style.color = nc;
