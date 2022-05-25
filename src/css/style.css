@@ -1,3 +1,10 @@
+html, body {
+  margin: 0px; /* Comentario CSS*/
+  padding: 0px; /* Los margenes son reducidos a 0 */
+  overflow: hidden;
+  font-family: 'Segoe UI', Century Gothic, Verdana, Arial;
+  background-image: url('../img/background.jpg');
+}
 
 #gridDatos
 {
@@ -13,9 +20,6 @@
   background-size:cover;
 }
 
-#gridPrev{
-    background-image: url('../img/background.jpg');
-}
 
 #fgp{
     border: 1px solid rgb(255, 255, 255);
